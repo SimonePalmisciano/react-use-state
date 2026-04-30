@@ -1,4 +1,4 @@
-import styles from "./HelloClasse154.module.css";
+import styles from "./Card.module.css";
 
 // function HelloClasse154() {
 //     return (
@@ -9,8 +9,15 @@ import styles from "./HelloClasse154.module.css";
 // }
 // export default HelloClasse154;
 
-function Card(){
-    return <h1>Hello World</h1>
+function Card() {
+    return (
+        <div class="card">
+            <div class="card-body">
+                <button className="btn btn-primary">nomeLinguaggio</button>
+                <p>contenutoLinguaggio</p>
+            </div>
+        </div>
+    );
 };
 
 export default Card;
