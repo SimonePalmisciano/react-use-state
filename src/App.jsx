@@ -1,8 +1,14 @@
-import Card from "./components/Card";
+import Card from "./components/Card.jsx";
+import languages from "./data/languages.js";
 
 function App() {
   return (
-    <Card />
+    languages.map(language => {
+      return <Card
+        key = {language.id}
+        language = {language}
+      />
+    })
   );
 }
 export default App;

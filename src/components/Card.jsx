@@ -9,10 +9,15 @@ import styles from "./Card.module.css";
 // }
 // export default HelloClasse154;
 
-function Card() {
+function Card(props) {
+    console.log(props)
+    
+    const { language } = props;
+    const { title, content } = language;
+
     return (
-        <div class="card">
-            <div class="card-body">
+        <div className="card">
+            <div className="card-body">
                 <button className="btn btn-primary">nomeLinguaggio</button>
                 <p>contenutoLinguaggio</p>
             </div>
