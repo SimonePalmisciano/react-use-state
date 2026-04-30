@@ -7,8 +7,9 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
 
   function handleSelectedLanguage(selected){
-
+    setSelectedLanguage(selected)
   }
+  console.log(selectedLanguage)
 
   return (
     <div className="container">
@@ -18,11 +19,15 @@ function App() {
             <Button
               key={language.id}
               language={language}
+              onSelect={handleSelectedLanguage}
+              active={selectedLanguage.id}
             />
           );
         })}
       </div>
-      <Card />
+      <Card 
+        language={selectedLanguage.description}
+      />
     </div>
   );
 }

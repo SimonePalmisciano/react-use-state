@@ -2,13 +2,13 @@ import { useState } from "react";
 import styles from "./Card.module.css";
 
 function Card({
-
+    language = ''
 }) {
 
     return (
         <div className="card">
             <div className="card-body">
-                <p></p>
+                <p>{language}</p>
             </div>
         </div>
     );
