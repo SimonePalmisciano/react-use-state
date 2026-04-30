@@ -18,11 +18,17 @@ function Card(props) {
 
     const btnClass = open ? 'btn-warning' : 'btn-primary';
 
+    const langContent = open ? description : '';
+
+    function clickHandler(event) {
+        setOpen(open ? false : true);
+    }
+
     return (
         <div className="card">
             <div className="card-body">
-                <button className={`btn ${btnClass}`}>{title}</button>
-                <p>{description}</p>
+                <button onClick={ clickHandler } className={`btn ${btnClass}`}>{title}</button>
+                <p>{langContent}</p>
             </div>
         </div>
     );
