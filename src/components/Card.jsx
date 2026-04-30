@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Card.module.css";
 
 // function HelloClasse154() {
@@ -10,16 +11,18 @@ import styles from "./Card.module.css";
 // export default HelloClasse154;
 
 function Card(props) {
-    console.log(props)
-    
-    const { language } = props;
-    const { title, content } = language;
+    const { language } = props; // dichiaro una const che ha gli stessi valori di props, quindi dell'oggetto che gli ho passato
+    const { id, title, description } = language; // qua dichiaro le variabili prese dalle chiavi dell'oggetto passato
+
+    const [open, setOpen] = useState(false); // diciamo che la card deve partire chiusa, quindi al click si dovrà aprire
+
+    const btnClass = open ? 'btn-warning' : 'btn-primary';
 
     return (
         <div className="card">
             <div className="card-body">
-                <button className="btn btn-primary">nomeLinguaggio</button>
-                <p>contenutoLinguaggio</p>
+                <button className={`btn ${btnClass}`}>{title}</button>
+                <p>{description}</p>
             </div>
         </div>
     );
