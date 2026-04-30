@@ -1,8 +1,8 @@
-import HelloClasse154 from "./components/HelloClasse154";
+import Card from "./components/Card";
 
 function App() {
   return (
-    <HelloClasse154 />
+    <Card />
   );
 }
 export default App;
