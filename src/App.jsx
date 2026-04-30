@@ -15,18 +15,19 @@ function App() {
     <div className="container">
       <div className="btn-container">
         {languages.map(language => {
+          const isActive = language.id === selectedLanguage.id;
           return (
             <Button
               key={language.id}
               language={language}
               onSelect={handleSelectedLanguage}
-              active={selectedLanguage.id}
+              active={isActive}
             />
           );
         })}
       </div>
       <Card 
-        language={selectedLanguage.description}
+        language={selectedLanguage}
       />
     </div>
   );

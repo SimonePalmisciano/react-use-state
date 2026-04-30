@@ -1,14 +1,15 @@
 import { useState } from "react";
 import styles from "./Card.module.css";
 
-function Card({
-    language = ''
-}) {
+function Card(props) {
+    const { language } = props;
+    const { title, description } = language;
 
     return (
         <div className="card">
             <div className="card-body">
-                <p>{language}</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </div>
         </div>
     );
